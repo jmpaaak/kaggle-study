@@ -36,4 +36,8 @@ EDA 결과 논의
 	
 	- 정리
 		○ Fraud에 대한 기준을 세우고 -> 그다음 프로세스를 진행한다
-
+    
+    - 다음 작업
+    	○ 전체 목표: 한번씩 Kaggle에 제출하기
+        ○ 종환: click_time - attributed_time timedelta 기반으로 분석
+        
