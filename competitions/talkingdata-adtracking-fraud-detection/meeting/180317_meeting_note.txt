@@ -1,0 +1,43 @@
+EDA 결과 논의
+	- Column 정보
+		○ Ip: 클릭한 폰의 IP 주소
+		○ App: 광고가 켜지는 앱 ID
+		○ Device: 모바일 폰 타입 
+		○ Os: 모바일 폰의 OS 버전
+		○ Channel: facebook 등등 광고의 채널
+		○ Click_time: timestamp of click (UTC)
+		○ Attributed_time: 앱이 다운로드 된 시간
+		○ Is_attributed: 앱이 실제로 다운로드 되는 것을 나타냄 (실제 추정해야 하는 값)
+		
+	- Ip에 대한 고찰
+		○ 특정 ip에서 높은 attributed count: 특정 사용자에게 몰릴 가능성이 있음
+	
+	- App, channel 에 대한 고찰
+		○ 특정 app과 channel에 몰린다
+		
+	- Channel, OS, Device에 대한 고찰
+		○ Os, device와의 높은 correlation 확인
+		○ 특정 Channel에 몰린다
+		○ 구형 OS, Device에 몰리지 않을까????
+		
+	- 시간(attributed_time)에 대한 고찰
+		○ Click_time이 특정 시간대에 몰려있음!!
+		○ 파생 변수를 만들면은 시간대별로 Binning: 1시간-4시간 간격으로 분할
+		○ 테스트에 들어오는 데이터가 여기에 들어온 시간대가 테스트도 들어올 것인가?? => 테스트 + 트레이닝 합쳐서 보는것도 괜찮을 것 같다
+
+	- 파생변수 생성 Idea
+		○ Click_time 및 attributed_time에 대한 Binning 수행
+		○ OS 및 device type에 대한 
+		
+	- 내가 만약 사기꾼이라면?
+		○ 폰을 싼걸로 마구잡이로 산다
+		○ 수익을 빨리 내야 하기 때문에 설치를 빠른 시간 안에 한다
+		○ Click_time 및 attributed_time의 간격이 일정하다
+	
+	- 정리
+		○ Fraud에 대한 기준을 세우고 -> 그다음 프로세스를 진행한다
+    
+    - 다음 작업
+    	○ 전체 목표: 한번씩 Kaggle에 제출하기
+        ○ 종환: click_time - attributed_time timedelta 기반으로 분석
+        
